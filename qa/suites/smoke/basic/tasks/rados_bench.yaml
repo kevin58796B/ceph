@@ -16,6 +16,7 @@ overrides:
      osd_auto_discovery: false
      ceph_origin: repository
      ceph_repository: dev
+     copy_admin_key: True
      ceph_mgr_modules:
           - status
           - restful
