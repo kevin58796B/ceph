@@ -36,6 +36,7 @@ overrides:
 tasks:
 - install: null
 - ssh-keys:
+- install.ship_utilities:
 - ceph-ansible:
 - thrashosds:
     chance_pgnum_grow: 2

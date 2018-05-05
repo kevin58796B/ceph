@@ -26,6 +26,7 @@ overrides:
 tasks:
 - install: null
 - ssh-keys:
+- install.ship_utilities:
 - ceph-ansible:
 - mon_thrash:
     revive_delay: 90
