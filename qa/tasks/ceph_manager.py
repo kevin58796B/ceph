@@ -1895,7 +1895,12 @@ class CephManager:
         """
         Get the timestamp of the last scrub.
         """
-        stats = self.get_single_pg_stats(self.get_pgid(pool, pgnum))
+        for _ in range(30):
+            stats = self.get_single_pg_stats(self.get_pgid(pool, pgnum))
+            if stats["state"] == "unknown":
+                break
+            sleep 1
+        assert stats["state"] != "unknown"
         return stats["last_scrub_stamp"]
 
     def do_pg_scrub(self, pool, pgnum, stype):
