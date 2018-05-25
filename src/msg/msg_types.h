@@ -39,6 +39,7 @@ public:
   int64_t _num;
 
 public:
+  // 定义消息类型
   static const int TYPE_MON = CEPH_ENTITY_TYPE_MON;
   static const int TYPE_MDS = CEPH_ENTITY_TYPE_MDS;
   static const int TYPE_OSD = CEPH_ENTITY_TYPE_OSD;
