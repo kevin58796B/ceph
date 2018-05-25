@@ -546,6 +546,7 @@ WRITE_CLASS_ENCODER_FEATURES(entity_addrvec_t);
 /*
  * a particular entity instance
  */
+// 每一个服务的名字和网络地址
 struct entity_inst_t {
   entity_name_t name;
   entity_addr_t addr;
